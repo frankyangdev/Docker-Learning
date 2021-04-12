@@ -18,6 +18,24 @@
 
 ![image](https://user-images.githubusercontent.com/39177230/114330350-1a055200-9b74-11eb-8456-4115df163bf9.png)
 
+### 2. Docker 中包括三个基本的概念：
+
+* Image(镜像)
+* Container(容器)
+* Repository(仓库)
+镜像是 Docker 运行容器的前提，仓库是存放镜像的场所，可见镜像更是 Docker 的核心。
+
+**镜像(Image)
+镜像，从认识上简单的来说，就是面向对象中的类，相当于一个模板。从本质上来说，镜像相当于一个文件系统。Docker 镜像是一个特殊的文件系统，除了提供容器运行时所需的程序、库、资源、配置等文件外，还包含了一些为运行时准备的一些配置参数（如匿名卷、环境变量、用户等）。镜像不包含任何动态数据，其内容在构建之后也不会被改变。
+
+**容器(Container)
+容器，从认识上来说，就是类创建的实例，就是依据镜像这个模板创建出来的实体。容器的实质是进程，但与直接在宿主执行的进程不同，容器进程运行于属于自己的独立的命名空间。因此容器可以拥有自己的root 文件系统、自己的网络配置、自己的进程空间，甚至自己的用户ID 空间。容器内的进程是运行在一个隔离的环境里，使用起来，就好像是在一个独立于宿主的系统下操作一样。这种特性使得容器封装的应用比直接在宿主运行更加安全。
+
+**仓库(Repository)
+仓库，从认识上来说，就好像软件包上传下载站，有各种软件的不同版本被上传供用户下载。镜像构建完成后，可以很容易的在当前宿主机上运行，但是，如果需要在其它服务器上使用这个镜像，我们就需要一个集中的存储、分发镜像的服务，Docker Registry 就是这样的服务。
+
+
+
 
 
 
@@ -45,6 +63,9 @@
 
 
 [Reference: Learning Docker](https://github.com/willitscale/learning-docker)
+[Reference: Docker入门吐血总结](https://blog.csdn.net/deng624796905/article/details/86493330?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522161818379316780255273360%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=161818379316780255273360&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-2-86493330.first_rank_v2_pc_rank_v29&utm_term=docker+&spm=1018.2226.3001.4187)
+[Reference: Docker——入门实战](https://blog.csdn.net/bskfnvjtlyzmv867/article/details/81044217)
+
 
 
 

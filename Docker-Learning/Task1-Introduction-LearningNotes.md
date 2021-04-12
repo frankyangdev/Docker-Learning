@@ -61,7 +61,20 @@
 
 ### 5. Install Docker
 
-[Official version:](https://docs.docker.com/docker-for-windows/install/)
+[Official version: Docker installation](https://docs.docker.com/docker-for-windows/install/)
+
+
+#### 5.1 Windows
+#### Docker支持64 位版本的Windows 10 Pro，且必须开启Hyper-V。开启方式为：打开“控制面板”->“程序”-> “启动或关闭Windows功能”，找到Hyper-V并勾选，确定重启电脑。
+
+
+#### 5.2 Linux(i.e. Ubuntu16.04+)
+
+<code> sudo apt install curl
+curl -fsSL get.docker.com -o get-docker.sh
+sudo sh get-docker.sh --mirror Aliyun
+</code>
+
 
 
 

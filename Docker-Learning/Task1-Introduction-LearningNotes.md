@@ -70,10 +70,47 @@
 
 #### 5.2 Linux(i.e. Ubuntu16.04+)
 
-<code> sudo apt install curl
+* 安装
+
+```
+sudo apt install curl
 curl -fsSL get.docker.com -o get-docker.sh
 sudo sh get-docker.sh --mirror Aliyun
-</code>
+```
+
+* 启动Docker CE
+
+```
+sudo systemctl enable docker
+sudo systemctl start docker
+```
+
+* 验证是否安装成功
+
+```
+docker version
+or
+docker info
+```
+
+* 建立docker 用户组
+
+默认情况下，docker 命令会使用Unix socket 与Docker 引擎通讯。而只有root 用户和docker 组的用户才可以访问Docker 引擎的Unix socket。出于安全考虑，一般Ubuntu系统上不会直接使用root 用户。因此，更好地做法是将需要使用docker 的用户加入docker用户组。
+
+```
+# 建立docker组
+sudo groupadd docker
+# 将当前用户加入docker组
+sudo usermod -aG docker $USER
+
+```
+
+* 重新启动服务
+```
+sudo systemctl daemon-reload
+sudo systemctl restart docker
+```
+
 
 
 

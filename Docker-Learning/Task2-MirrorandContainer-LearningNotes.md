@@ -1,7 +1,23 @@
 
-### 1. 镜像常用命令 ###
+### 1. 镜像和容器 ###
+
+镜像（Image）就是一堆只读层（read-only layer）的统一视角
+
+![image](https://user-images.githubusercontent.com/39177230/114907858-17de1480-9e4e-11eb-8748-89bafc6365ea.png)
+
+
+
+容器（container）的定义和镜像（image）几乎一模一样，也是一堆层的统一视角，唯一区别在于容器的最上面那一层是可读可写的。
+
+![image](https://user-images.githubusercontent.com/39177230/114907895-22001300-9e4e-11eb-91b2-a98cef8ab3a6.png)
+
+
+
+### 2. 镜像常用命令 ###
 
 ![image](https://user-images.githubusercontent.com/39177230/114906261-71454400-9e4c-11eb-8177-6768ab7e7735.png)
+
+
 
 1. 检索云端镜像 (i.e mysql)
  
@@ -60,7 +76,7 @@ systemctl daemon-reload
 service docker restart
 ```
 
-### 2. 容器常用操作 ###
+### 3. 容器常用操作 ###
 
 
 1. 查看容器
@@ -152,12 +168,13 @@ ip addr show                                  
 
 
 
-
+**Reference **
 
 [Docker 镜像、容器 常用命令 与 操作](https://blog.csdn.net/wangmx1993328/article/details/81735070)
 
-————————————————
 [Docker容器 常用命令 与 操作](https://blog.csdn.net/wangmx1993328/article/details/81735070)
+
+[深入理解Docker容器和镜像](https://blog.csdn.net/u012811805/article/details/106547497)
 
 
 

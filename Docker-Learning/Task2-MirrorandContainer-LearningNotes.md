@@ -130,9 +130,7 @@ docker logs container-name|container-id ：根据容器名或者容器 id 查看
 7. 容器端口映射
 
 ```docker run --name container-name -d image-name:tag：单纯的如此运行容器，程序占用的是 Docker 容器内部的端口，并不是服务器对外的访问端口，所以必须做 端口映射 将服务器的实际端口映射到 Docker 容器中的端口才能访问
-```
 
-```
 docker run --name container-name:tag -d -p 服务器端口:Docker端口 image-name：端口映射
 
 --name：自定义容器名，不指定时，docker 会自动生成一个名称
@@ -168,7 +166,7 @@ ip addr show                                  
 
 
 
-**Reference **
+** Reference **
 
 [Docker 镜像、容器 常用命令 与 操作](https://blog.csdn.net/wangmx1993328/article/details/81735070)
 

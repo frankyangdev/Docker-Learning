@@ -35,6 +35,8 @@ docker inspect web
 
 ![image](https://user-images.githubusercontent.com/39177230/115024128-3eee2200-9ef2-11eb-84d0-824714cd4faf.png)
 
+### check web server if it is running
+
 ![image](https://user-images.githubusercontent.com/39177230/115023928-f9c9f000-9ef1-11eb-8d2a-f4228e71eda6.png)
 
 

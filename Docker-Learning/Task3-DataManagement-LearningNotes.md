@@ -40,7 +40,7 @@ docker inspect web
 ![image](https://user-images.githubusercontent.com/39177230/115023928-f9c9f000-9ef1-11eb-8d2a-f4228e71eda6.png)
 
 
-* **when delete volume but failed to delete due to volume is in use, that means the container and web instance are using the volume. Have to stop container and then delete volume
+* **when delete volume but failed to delete due to volume is in use, that means the container and web instance are using the volume. Have to stop container and then delete volume**
 
 
 ```

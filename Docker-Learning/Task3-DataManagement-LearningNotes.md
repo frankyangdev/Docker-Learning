@@ -29,7 +29,7 @@ docker inspect web
 
 ![image](https://user-images.githubusercontent.com/39177230/115023079-e0747400-9ef0-11eb-9e3c-5803a4d9dc0d.png)
 
-* **we can see the container web with volume info**
+* **we can see the container web with volume  has mounted to target**
 
 ![image](https://user-images.githubusercontent.com/39177230/115023395-511b9080-9ef1-11eb-8be4-945956a476e9.png)
 

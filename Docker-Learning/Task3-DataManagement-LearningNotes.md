@@ -40,6 +40,25 @@ docker inspect web
 ![image](https://user-images.githubusercontent.com/39177230/115023928-f9c9f000-9ef1-11eb-8d2a-f4228e71eda6.png)
 
 
+* **when delete volume but failed to delete due to volume is in use, that means the container and web instance are using the volume. Have to stop container and then delete volume
+
+
+```
+docker volume rm datawhale
+Error response from daemon: remove datawhale: volume is in use - [1f2526e9e107a5d326b56898a67b51e9eb21904e704f1ea779441c6f18b7f78f]
+
+docker stop 1f2526e9e107a5d326b56898a67b51e9eb21904e704f1ea779441c6f18b7f78f
+
+docker rm 1f2526e9e107a5d326b56898a67b51e9eb21904e704f1ea779441c6f18b7f78f 
+
+docker volume rm datawhale
+
+docker volume ls
+```
+
+
+
+
 
 
 

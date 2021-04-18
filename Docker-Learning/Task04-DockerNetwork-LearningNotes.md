@@ -47,17 +47,31 @@ docker: Error response from daemon: Ports are not available: listen tcp 127.0.0.
 ```
 
 * `docker network create -d bridge my-net`
+* `docker run -it --rm --name busybox2 --network my-net busybox sh`
+* `docker run -it --rm --name busybox2 --network my-net busybox sh`
 
 ```
+/ # ping busybox1
 PING busybox1 (172.19.0.2): 56 data bytes
-64 bytes from 172.19.0.2: seq=0 ttl=64 time=0.183 ms
-64 bytes from 172.19.0.2: seq=1 ttl=64 time=0.094 ms
-64 bytes from 172.19.0.2: seq=2 ttl=64 time=0.085 ms
-64 bytes from 172.19.0.2: seq=3 ttl=64 time=0.108 ms
+64 bytes from 172.19.0.2: seq=0 ttl=64 time=0.202 ms
+64 bytes from 172.19.0.2: seq=1 ttl=64 time=0.132 ms
+64 bytes from 172.19.0.2: seq=2 ttl=64 time=0.125 ms
+64 bytes from 172.19.0.2: seq=3 ttl=64 time=0.126 ms
+64 bytes from 172.19.0.2: seq=4 ttl=64 time=0.143 ms
+64 bytes from 172.19.0.2: seq=5 ttl=64 time=0.072 ms
 ^C
 --- busybox1 ping statistics ---
-4 packets transmitted, 4 packets received, 0% packet loss
-round-trip min/avg/max = 0.085/0.117/0.183 ms
+6 packets transmitted, 6 packets received, 0% packet loss
+round-trip min/avg/max = 0.072/0.133/0.202 ms
+```
+
+* `docker container ls`
+
+```
+CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS          PORTS                   NAMES       
+f6729bf55103   busybox        "sh"                     21 seconds ago   Up 19 seconds                           busybox2    
+dd74ca72d851   busybox        "sh"                     7 minutes ago    Up 7 minutes                            busybox1    
+2ec886612108   nginx:alpine   "/docker-entrypoint.…"   28 minutes ago   Up 28 minutes   0.0.0.0:49158->80/tcp   silly_rhodes
 ```
 
 

@@ -1,4 +1,4 @@
-1. `docker container ls`
+* `docker container ls`
 
 ```
 CONTAINER ID   IMAGE          COMMAND                  CREATED        STATUS        PORTS                   NAMES

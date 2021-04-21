@@ -260,3 +260,4 @@ Redis 服务的定义相对比较简单:
 
 ### Reference: ###
 1. [使用Docker Compose部署应用详解](https://blog.csdn.net/u013071319/article/details/107123677/)
+2. [Docker Compose for Apache Spark](https://dev-listener.medium.com/docker-compose-for-developers-97e2f44a91b8)

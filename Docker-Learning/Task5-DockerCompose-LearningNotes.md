@@ -82,7 +82,7 @@ webapp_web_1     python app.py                    Up      5000/tcp
 
 * `docker container ls`  
 
-2 services in yaml files will create 2 containers
+2 services in yaml files docker compose will create 2 containers
 
 ```
 ONTAINER ID   IMAGE        COMMAND                  CREATED        STATUS       PORTS      NAMES

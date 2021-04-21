@@ -203,6 +203,8 @@ Redis 服务的定义相对比较简单:
 
 If it is not installed in Ubuntu 18.04
 
+run bash buildimage.sh first and then run docker-compose up
+
 `apt  install docker-compose`
 
  ![image](https://user-images.githubusercontent.com/39177230/115524841-1f277700-a2c1-11eb-97f4-9f10889a6935.png)
@@ -252,4 +254,4 @@ If it is not installed in Ubuntu 18.04
 ### Reference: ###
 1. [使用Docker Compose部署应用详解](https://blog.csdn.net/u013071319/article/details/107123677/)
 2. [Creating a Spark Standalone Cluster with Docker and docker-compose](https://medium.com/@marcovillarreal_40011/creating-a-spark-standalone-cluster-with-docker-and-docker-compose-ba9d743a157f)
-3. 
+

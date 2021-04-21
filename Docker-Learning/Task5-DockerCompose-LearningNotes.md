@@ -118,43 +118,14 @@ redis_1  | 1:C 20 Apr 2021 16:26:49.387 # Warning: no config file specified, usi
 redis_1  | 1:M 20 Apr 2021 16:26:49.387 * monotonic clock: POSIX clock_gettime
 redis_1  | 1:M 20 Apr 2021 16:26:49.389 * Running mode=standalone, port=6379.
 redis_1  | 1:M 20 Apr 2021 16:26:49.390 # Server initialized
-redis_1  | 1:M 20 Apr 2021 16:26:49.390 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or 
-run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
-redis_1  | 1:M 20 Apr 2021 16:26:49.390 * Ready to accept connections
-redis_1  | 1:signal-handler (1618956211) Received SIGTERM scheduling shutdown...
-redis_1  | 1:M 20 Apr 2021 22:03:31.068 # User requested shutdown...
-redis_1  | 1:M 20 Apr 2021 22:03:31.069 * Saving the final RDB snapshot before exiting.
-redis_1  | 1:M 20 Apr 2021 22:03:31.081 * DB saved on disk
-redis_1  | 1:M 20 Apr 2021 22:03:31.083 # Redis is now ready to exit, bye bye...
-redis_1  | 1:C 20 Apr 2021 22:07:36.844 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
-redis_1  | 1:C 20 Apr 2021 22:07:36.845 # Redis version=6.2.2, bits=64, commit=00000000, modified=0, pid=1, just started
-redis_1  | 1:C 20 Apr 2021 22:07:36.845 # Warning: no config file specified, using the default config. In order to specify a config file use redis-server /path/to/redis.conf
-redis_1  | 1:M 20 Apr 2021 22:07:36.845 * monotonic clock: POSIX clock_gettime
-redis_1  | 1:M 20 Apr 2021 22:07:36.848 * Running mode=standalone, port=6379.
-redis_1  | 1:M 20 Apr 2021 22:07:36.848 # Server initialized
-redis_1  | 1:M 20 Apr 2021 22:07:36.848 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or 
-run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
-redis_1  | 1:M 20 Apr 2021 22:07:36.849 * Loading RDB produced by version 6.2.2
-redis_1  | 1:M 20 Apr 2021 22:07:36.849 * RDB age 245 seconds
-redis_1  | 1:M 20 Apr 2021 22:07:36.849 * RDB memory usage when created 0.77 Mb
-redis_1  | 1:M 20 Apr 2021 22:07:36.849 * DB loaded from disk: 0.000 seconds
-redis_1  | 1:M 20 Apr 2021 22:07:36.849 * Ready to accept connections
+................
 web_1    |  * Serving Flask app "app" (lazy loading)
 web_1    |  * Environment: production
 web_1    |    WARNING: This is a development server. Do not use it in a production deployment.
 web_1    |    Use a production WSGI server instead.
 web_1    |  * Debug mode: on
 web_1    |  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
-web_1    |  * Restarting with stat
-web_1    |  * Debugger is active!
-web_1    |  * Serving Flask app "app" (lazy loading)
-web_1    |  * Environment: production
-web_1    |    WARNING: This is a development server. Do not use it in a production deployment.
-web_1    |    Use a production WSGI server instead.
-web_1    |  * Debug mode: on
-web_1    |  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
-web_1    |  * Restarting with stat
-web_1    |  * Debugger is active!
+................
 ```
 
 * yaml file 
@@ -228,7 +199,11 @@ Redis 服务的定义相对比较简单:
  
  
 
-* Creating a Spark Standalone Cluster with Docker and docker-compose
+* docker-compose practice: Creating a Spark Standalone Cluster with Docker and docker-compose
+
+If it is not installed in Ubuntu 18.04
+
+`apt  install docker-compose`
 
  ![image](https://user-images.githubusercontent.com/39177230/115524841-1f277700-a2c1-11eb-97f4-9f10889a6935.png)
 

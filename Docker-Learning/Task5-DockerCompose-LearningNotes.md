@@ -197,24 +197,35 @@ web_1    |  * Debugger is active!
 
 web-fe 的服务定义中，包含如下指令。
 
-build
+*build*
   指定 Docker 基于当前目录（.）下 Dockerfile 中定义的指令来构建一个新镜像。该镜像会被用于启动该服务的容器。
 
-command
+*command*
   python app.py 指定 Docker 在容器中执行名为 app.py 的 Python 脚本作为主程序。因此镜像中必须包含 app.py 文件以及 Python，这一点在 Dockerfile 中可以得到满足。
 
-ports
+*ports*
   指定 Docker 将容器内（-target）的 5000 端口映射到主机（published）的 5000 端口。这意味着发送到 Docker 主机 5000 端口的流量会被转发到容器的 5000 端口。容器中的应用监听端口 5000。
 
-networks
+*networks*
   使得 Docker 可以将服务连接到指定的网络上。这个网络应该是已经存在的，或者是在 networks 一级 key 中定义的网络。对于 Overlay 网络来说，它还需要定义一个 attachable 标志，这样独立的容器才可以连接上它（这时 Docker Compose 会部署独立的容器而不是 Docker 服务）。
 
-volumes
+*volumes*
   指定 Docker 将 counter-vol 卷（source:）挂载到容器内的 /code（target:）。counter-vol 卷应该是已存在的，或者是在文件下方的 volumes 一级 key 中定义的。
 
   综上，Docker Compose 会调用 Docker 来为 web-fe 服务部署一个独立的容器。该容器基于与 Compose 文件位于同一目录下的 Dockerfile 构建的镜像。基于该镜像启动的容器会运行 app.py 作为其主程序，将 5000 端口暴露给宿主机，连接到 counter-net 网络上，并挂载一个卷到/code。
 
 `注： 从技术上讲，本例并不需要配置 command: python app.py。因为镜像的 Dockerfile 已经将 python app.py 定义为了默认的启动程序。但是，本例主要是为了展示其如何执行，因此也可用于覆盖 Dockerfile 中配置的 CMD 指令。`
+
+Redis 服务的定义相对比较简单:
+
+*image*
+  redis:alpine 使得 Docker 可以基于 redis:alpine 镜像启动一个独立的名为 redis 的容器。 这个镜像会被从 Docker Hub 上拉取下来。
+
+*networks*
+  配置 redis 容器连接到 counter-net 网络。
+
+ 由于两个服务都连接到 counter-net 网络，因此它们可以通过名称解析到对方的地址。了解这一点很重要，本例中上层应用被配置为通过名称与 Redis 服务通信。
+
 
 
 

@@ -225,7 +225,23 @@ Redis 服务的定义相对比较简单:
   配置 redis 容器连接到 counter-net 网络。
 
  由于两个服务都连接到 counter-net 网络，因此它们可以通过名称解析到对方的地址。了解这一点很重要，本例中上层应用被配置为通过名称与 Redis 服务通信。
+ 
+ 
 
+* Creating a Spark Standalone Cluster with Docker and docker-compose
+
+ ![image](https://user-images.githubusercontent.com/39177230/115524841-1f277700-a2c1-11eb-97f4-9f10889a6935.png)
+
+ 运行结果:
+ 
+ `docker container ls`
+ 
+ ![image](https://user-images.githubusercontent.com/39177230/115530040-ff468200-a2c5-11eb-8697-63e5c9dd2ebf.png)
+ 
+ ![image](https://user-images.githubusercontent.com/39177230/115530569-7a0f9d00-a2c6-11eb-8d07-868fa4f0829e.png)
+
+ 
+ [source](https://github.com/mvillarrealb/docker-spark-cluster)
 
 
 
@@ -260,4 +276,5 @@ Redis 服务的定义相对比较简单:
 
 ### Reference: ###
 1. [使用Docker Compose部署应用详解](https://blog.csdn.net/u013071319/article/details/107123677/)
-2. [Docker Compose for Apache Spark](https://dev-listener.medium.com/docker-compose-for-developers-97e2f44a91b8)
+2. [Creating a Spark Standalone Cluster with Docker and docker-compose](https://medium.com/@marcovillarreal_40011/creating-a-spark-standalone-cluster-with-docker-and-docker-compose-ba9d743a157f)
+3. 

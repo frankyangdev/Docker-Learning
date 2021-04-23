@@ -1,3 +1,5 @@
+## practice using github actions to build docker image into docker hub ##
+
 
 ### Set up a Docker project ###
 
@@ -105,6 +107,18 @@ Check in Docker Hub
 ![image](https://user-images.githubusercontent.com/39177230/115875989-5e4bf880-a478-11eb-8dba-10ebc5a253d8.png)
 
 
+Check in local Docker Desktop
+
+![image](https://user-images.githubusercontent.com/39177230/115877674-49706480-a47a-11eb-90ef-aa648d79a43f.png)
+
+Pull latest image to local and run in docker container
+
+![image](https://user-images.githubusercontent.com/39177230/115878103-bdab0800-a47a-11eb-9bd5-f574e01f299a.png)
+
+
+### Reference ###
+
+[Configure GitHub Actions](https://docs.docker.com/ci-cd/github-actions/)
 
 
 

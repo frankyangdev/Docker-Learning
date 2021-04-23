@@ -91,7 +91,11 @@ Once edit finished, click Start Submit
 
 ![image](https://user-images.githubusercontent.com/39177230/115875083-6e170d00-a477-11eb-8674-5de3717f010e.png)
 
-Last run update tagname and build failed due to upper case.
+Last run update tagname and build failed due to upper case
+
+![image](https://user-images.githubusercontent.com/39177230/115876250-a5d28480-a478-11eb-8864-47538024ae67.png)
+
+Update tagname and start submit again
 
 ![image](https://user-images.githubusercontent.com/39177230/115875899-48d6ce80-a478-11eb-8edf-a557c838fe6a.png)
 

@@ -1,4 +1,4 @@
-## practice using github actions to build docker image into docker hub ##
+## Practise github actions as CI to build docker image into docker hub ##
 
 
 ### Set up a Docker project ###

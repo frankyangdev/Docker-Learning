@@ -89,7 +89,7 @@ jobs:
 
 Once edit finished, click Start Submit
 
-![image](https://user-images.githubusercontent.com/39177230/115875083-6e170d00-a477-11eb-8674-5de3717f010e.png)
+![image](https://user-images.githubusercontent.com/39177230/115876420-dfa38b00-a478-11eb-9ccb-fcb28ae9dac3.png)
 
 Last run update tagname and build failed due to upper case
 

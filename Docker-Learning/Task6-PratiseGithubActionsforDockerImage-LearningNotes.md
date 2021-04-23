@@ -1,7 +1,7 @@
 ## Practise github actions as CI to build docker image into docker hub ##
 
 
-### Set up a Docker project ###
+### 1. Set up a Docker project ###
 
 access Docker Hub from any workflows you create. To do this:
 
@@ -22,7 +22,7 @@ Now, add this Personal Access Token (PAT) as a second secret into the GitHub sec
 
 ![image](https://user-images.githubusercontent.com/39177230/115871229-dc0d0580-a472-11eb-818c-95e9a1f5b711.png)
 
-### Set up the GitHub Actions workflow ###
+### 2. Set up the GitHub Actions workflow ###
 
 In the previous section, we created a PAT and added it to GitHub to ensure we can access Docker Hub from any workflow. Now, let’s set up our GitHub Actions workflow to build and store our images in Hub. We can achieve this by creating two Docker actions:
 
@@ -90,28 +90,28 @@ jobs:
         run: echo ${{ steps.docker_build.outputs.digest }}
 ```        
 
-Once edit finished, click Start Submit
+* Once edit finished, click Start Submit
 
 ![image](https://user-images.githubusercontent.com/39177230/115876420-dfa38b00-a478-11eb-9ccb-fcb28ae9dac3.png)
 
-Last run update tagname and build failed due to upper case
+* Last run update tagname and build failed due to upper case
 
 ![image](https://user-images.githubusercontent.com/39177230/115876250-a5d28480-a478-11eb-8864-47538024ae67.png)
 
-Update tagname and start submit again
+* Update tagname and start submit again
 
 ![image](https://user-images.githubusercontent.com/39177230/115875899-48d6ce80-a478-11eb-8edf-a557c838fe6a.png)
 
-Check in Docker Hub
+* Check in Docker Hub
 
 ![image](https://user-images.githubusercontent.com/39177230/115875989-5e4bf880-a478-11eb-8dba-10ebc5a253d8.png)
 
 
-Check in local Docker Desktop
+* Check in local Docker Desktop
 
 ![image](https://user-images.githubusercontent.com/39177230/115877674-49706480-a47a-11eb-90ef-aa648d79a43f.png)
 
-Pull latest image to local and run in docker container
+* Pull latest image to local and run in docker container
 
 ![image](https://user-images.githubusercontent.com/39177230/115878103-bdab0800-a47a-11eb-9bd5-f574e01f299a.png)
 

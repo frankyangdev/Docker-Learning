@@ -3,7 +3,8 @@
 
 access Docker Hub from any workflows you create. To do this:
 
-Add your Docker ID as a secret to GitHub. Navigate to your GitHub repository and click Settings > Secrets > New secret.
+Add your Docker ID as a secret to GitHub project(my exmaple project [DockerDemowithGithubActions](https://github.com/frankyangdev/DockerDemowithGithubActions). 
+Navigate to your GitHub repository and click Settings > Secrets > New secret.
 
 Create a new secret with the name DOCKER_HUB_USERNAME and your Docker ID as value.
 

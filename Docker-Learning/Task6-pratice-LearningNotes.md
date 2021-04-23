@@ -30,8 +30,76 @@ In this example, let us set the push flag to true as we also want to push. We’
 
 To set up the workflow:
 
-* Go to your repository in GitHub and then click Actions > New workflow.
+* Go to your repository in GitHub and then click Actions > New workflow > Setup this workflow.
 * Click set up a workflow yourself and add the following content:
 
-First, we will name this workflow:
+**main.yml**
+
+```
+# This is a basic workflow to help you get started with Actions
+
+name: CI to Docker Hub
+
+# Controls when the action will run. 
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [ main ]
+  #pull_request:
+   # branches: [ main ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+    
+      - name: Check Out Repo 
+        uses: actions/checkout@v2
+
+      - name: Login to Docker Hub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKER_HUB_USERNAME }}
+          password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
+
+      - name: Set up Docker Buildx
+        id: buildx
+        uses: docker/setup-buildx-action@v1
+
+      - name: Build and push
+        id: docker_build
+        uses: docker/build-push-action@v2
+        with:
+          context: ./
+          file: ./Dockerfile
+          push: true
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/DockerDemoGithubAciton-Frankyangdev:latest
+
+      - name: Image digest
+        run: echo ${{ steps.docker_build.outputs.digest }}
+```        
+
+Once edit finished, click Start Submit
+
+![image](https://user-images.githubusercontent.com/39177230/115875083-6e170d00-a477-11eb-8674-5de3717f010e.png)
+
+Last run update tagname and build failed due to upper case.
+
+![image](https://user-images.githubusercontent.com/39177230/115875899-48d6ce80-a478-11eb-8edf-a557c838fe6a.png)
+
+Check in Docker Hub
+
+![image](https://user-images.githubusercontent.com/39177230/115875989-5e4bf880-a478-11eb-8dba-10ebc5a253d8.png)
+
+
+
+
 
